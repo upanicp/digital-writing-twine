@@ -14,12 +14,24 @@
 
 tw-story {
   font-family: "Courier Prime", monospace;
-  color: #FFF;
-  background-color: #000;
+  color: #F8F3E1;
+  background-color: #351414;
 }
 
 .story-image {
   width: 100%;
+  
+ .story-image-larger {
+  width: 150%;
+}
+  
+.story-image-smaller {
+  width: 50%;
+  
+.story-image-smallest { 
+  width: 25%;
+}
+}
 }
 
 tw-link, tw-link:link, tw-link:visited, tw-link.visited {
@@ -67,15 +79,17 @@ c)[[go forward]]
 
 It&#39;s a deer.
 
-&lt;img class=&quot;story-image&quot; src=&quot;./images/deer.jpg&quot; alt=&quot;a deer /&gt;</tw-passagedata><tw-passagedata pid="7" name="go right" tags="" position="975,625" size="100,100">Huh? 
+&lt;img class=&quot;story-image-larger&quot; src=&quot;./images/deer.jpg&quot; alt=&quot;a deer&quot; /&gt;</tw-passagedata><tw-passagedata pid="7" name="go right" tags="" position="975,625" size="100,100">Huh? 
 
 Who&#39;s that?
 
-&lt;img class=&quot;story-image&quot; src=&quot;./images/man.jpg&quot; alt=&quot;a man&quot; /&gt;</tw-passagedata><tw-passagedata pid="8" name="go forward" tags="" position="725,625" size="100,100">AHHHH!!! 
+&lt;img class=&quot;story-image-smallest&quot; src=&quot;./images/man.jpg&quot; alt=&quot;a man&quot; /&gt;</tw-passagedata><tw-passagedata pid="8" name="go forward" tags="" position="725,625" size="100,100">AHHHH!!! 
 
 A wolf.
 
-&lt;img class=&quot;story-image&quot; src=&quot;./images/wolf.jpg&quot; alt=&quot;a wolf&quot; /&gt;</tw-passagedata></tw-storydata>
+&lt;img class=&quot;story-image-smaller&quot; src=&quot;./images/wolf.jpg&quot; alt=&quot;a wolf&quot; /&gt;
+
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
