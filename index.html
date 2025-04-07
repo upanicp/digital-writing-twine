@@ -61,8 +61,13 @@ max-width: 100%;
 height: auto;
 display: block;
 }
-tw-story[tags~="example-background"] {  /* the tag added in step 2 */
+tw-story[tags~="forest-background"] {  /* the tag added in step 2 */
   background-image: url(./images/forest.jpg);  /* the image added in step 1 */
+  background-size: cover;  /* cover the whole element */
+  background-repeat: no-repeat;  /* do not repeat the background image */
+}
+tw-story[tags~="heaven-background"] {  /* the tag added in step 2 */
+  background-image: url(./images/heaven.jpg);  /* the image added in step 1 */
   background-size: cover;  /* cover the whole element */
   background-repeat: no-repeat;  /* do not repeat the background image */
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Practice start" tags="" position="600,250" size="100,100">You wake up in a room lit only by a flickering lightbulb. There is nothing in the room except for two strange items: a bottle of whine and a wheel of cheese. 
@@ -73,7 +78,7 @@ a)[[wine]]
 
 b)[[cheese]]
 </tw-passagedata><tw-passagedata pid="2" name="wine" tags="" position="600,375" size="100,100">You pick up the wine, the bottle is unlabled and instead of a cork, there is cling wrap around the top tied in place with a rubber band. You remove the wrap and take a swig. Ugh. A red. You decide you don&#39;t like it and it burns as it foes down your throat. It&#39;s probably off. Still, the burning persists and you start to cough, something wet falls out of your mouth. You wipe off your lips with your hand and in the flickering light you see the deep red of blood. You cough even more, scratching at your throat to ease the burning. It gets harder to breath, throat swelling up. You collapse onto the floor. 
-(t8n-delay: 3s) + (t8n: &quot;fade&quot;) [In your final moments of conciousness you realise that maybe it was poisoned.]
+(t8n-delay: 3s) + (t8n: &quot;fade&quot;) [In your final moments of conciousness you realise that maybe it was [[poisoned]].]
 
 &lt;img class=&quot;story-image&quot; src=&quot;./images/forest.jpg&quot; alt=&quot;a forest&quot;&gt;
 </tw-passagedata><tw-passagedata pid="3" name="cheese" tags="" position="725,375" size="100,100">You examine the cheese. It is a large wheel, almost as long as your forearm, and it has a pale, wrinkly rind. The rind is tough, and you don&#39;t have a knife to cut into it. You look around the room, but all you see is a closed door and a window looking out into the night. 
@@ -85,7 +90,7 @@ a)[[the door]]
 b)[[the window]]</tw-passagedata><tw-passagedata pid="4" name="the door" tags="" position="725,500" size="100,100">&lt;audio src=&quot;./audio/doorcreak.mp3&quot; autoplay loop&gt;&lt;/audio&gt;
 
 You open the door. The hallway is greeted my a mysterious gas. You inhale it. You choke and [[die. ]]
-</tw-passagedata><tw-passagedata pid="5" name="the window" tags="" position="850,500" size="100,100">&lt;audio src=&quot;./audio/forestsounds.mp3&quot; autoplay loop&gt;&lt;/audio&gt;
+</tw-passagedata><tw-passagedata pid="5" name="the window" tags="forest-background" position="850,500" size="100,100">&lt;audio src=&quot;./audio/forestsounds.mp3&quot; autoplay loop&gt;&lt;/audio&gt;
 
 You approach the window. It is dark out, you can&#39;t see much except for the silhouttes of trees. There is figure that moves. It seems like a deer (click-replace: &quot;deer&quot;) [bear] (click-replace: &quot;wolf&quot;) [man]. You pry open the window. It&#39;s tough, like no one has touched it in a while, but you eventually open up enough of a space for you to crawl you. Once you are outside, you look around. 
 
@@ -109,7 +114,7 @@ Who&#39;s that?
 A wolf.
 
 
-&lt;img class=&quot;story-image-smaller&quot; src=&quot;./images/wolf.jpg&quot; alt=&quot;a wolf&quot; /&gt;</tw-passagedata><tw-passagedata pid="9" name="die. " tags="" position="600,625" size="100,100">&lt;div class=&quot;story-room&quot;&gt;&lt;div class=&quot;story-text&quot;&gt;Is this heaven?.&lt;/div&gt;&lt;div class=&quot;story-image&quot;&gt;&lt;img src=&quot;./images/heaven.jpg&quot; alt=&quot;an example&quot; /&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
+&lt;img class=&quot;story-image-smaller&quot; src=&quot;./images/wolf.jpg&quot; alt=&quot;a wolf&quot; /&gt;</tw-passagedata><tw-passagedata pid="9" name="die. " tags="" position="600,625" size="100,100">&lt;div class=&quot;story-room&quot;&gt;&lt;div class=&quot;story-text&quot;&gt;Is this heaven?.&lt;/div&gt;&lt;div class=&quot;story-image&quot;&gt;&lt;img src=&quot;./images/heaven.jpg&quot; alt=&quot;an example&quot; /&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="poisoned" tags="heaven-background" position="600,500" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
